@@ -71,14 +71,13 @@ services:
   # Runs once: creates/migrates the metadata DB and the initial admin user.
   airflow-init:
     <<: *airflow-common
-    entrypoint: /bin/bash
+    entrypoint: /entrypoint bash -c
     command:
-      - -c
       - |
         airflow db migrate
         airflow users create \
-          --username "$${_AIRFLOW_WWW_USER_USERNAME}" \
-          --password "$${_AIRFLOW_WWW_USER_PASSWORD}" \
+          --username "${_AIRFLOW_WWW_USER_USERNAME}" \
+          --password "${_AIRFLOW_WWW_USER_PASSWORD}" \
           --firstname Admin \
           --lastname Admin \
           --role Admin \
