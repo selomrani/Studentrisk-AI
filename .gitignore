@@ -1,0 +1,21 @@
+.env
+TEST
+
+# IDE
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Airflow runtime
+logs/
+
+# kagglehub download cache
+data/.kagglehub/
+
+# Generated artifacts (keep the directories via .gitkeep)
+models/*
+!models/.gitkeep
+reports/*
+!reports/.gitkeep

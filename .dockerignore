@@ -1,0 +1,12 @@
+.git
+.gitignore
+.idea
+.env
+.env.example
+__pycache__
+*.py[cod]
+.venv
+logs
+data
+models
+reports

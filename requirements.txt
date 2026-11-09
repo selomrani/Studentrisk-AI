@@ -1,0 +1,11 @@
+# Python dependencies installed into the Airflow image (see Dockerfile).
+# Apache Airflow itself comes from the base image and is intentionally not listed here.
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
+seaborn
+psycopg2-binary
+requests
+kagglehub
