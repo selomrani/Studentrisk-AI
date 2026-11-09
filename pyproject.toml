@@ -6,8 +6,15 @@ readme = "README.md"
 authors = [
     { name = "Soufyane El Omrani", email = "elomranisoufyan@gmail.com" }
 ]
-requires-python = ">=3.11"
-dependencies = []
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "fg-data-profiling>=4.20.0",
+    "ipykernel>=7.4.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=2.2,<3.0",
+    "seaborn>=0.13.2",
+]
 
 [project.scripts]
 studentrisk-ai = "studentrisk_ai:main"
