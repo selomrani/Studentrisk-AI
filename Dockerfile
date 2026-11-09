@@ -1,17 +1,19 @@
 FROM apache/airflow:2.10.5-python3.11
 
-# uv binary, copied from the official image.
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
+# Install project‑specific Python dependencies.
+# ------------------------------------------------------------------
+# The base Airflow image already contains a functional entry‑point and
+# the required constraints file, so we install our extra packages with
+# plain pip. This avoids the broken `airflow` script that `uv` writes.
+# ------------------------------------------------------------------
+USER airflow
 
-ARG AIRFLOW_VERSION=2.10.5
-ARG PYTHON_VERSION=3.11
-
-# Install into the system interpreter (no venv) so the Airflow entrypoint,
-# which uses the system Python, can import these packages. Airflow's own
-# constraints file keeps dependency resolution from breaking the base image.
-USER root
 COPY requirements.txt /tmp/requirements.txt
-RUN uv pip install --system --no-cache \
-        --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt" \
-        -r /tmp/requirements.txt
+
+# Install the Python requirements as the airflow user (per official docs).
+RUN pip install --no-cache-dir \
+    --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.11.txt" \
+    -r /tmp/requirements.txt
+
+# Return to the airflow user for the runtime (already airflow).
 USER airflow
