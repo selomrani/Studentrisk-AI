@@ -9,3 +9,5 @@ seaborn
 psycopg2-binary
 requests
 kagglehub
+mlflow
+xgboost
