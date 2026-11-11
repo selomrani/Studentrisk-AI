@@ -1,0 +1,26 @@
+artifact_path: /home/kcrowly/PycharmProjects/Studentrisk-AI/notebooks/Training/mlruns/1/models/m-7b79fb9a2d5d4072a26bbe74d78c2754/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.11.16
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+    - xgboost.core.Booster
+    - xgboost.sklearn.XGBClassifier
+mlflow_version: 3.18.0
+model_id: m-7b79fb9a2d5d4072a26bbe74d78c2754
+model_size_bytes: 24301
+model_uuid: m-7b79fb9a2d5d4072a26bbe74d78c2754
+prompts: null
+run_id: 993ddecb3d074da2ae1ce8f0d9de5c60
+utc_time_created: '2026-11-11 14:36:56.425783'
