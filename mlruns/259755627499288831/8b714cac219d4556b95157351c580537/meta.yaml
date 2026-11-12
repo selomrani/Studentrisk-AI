@@ -1,0 +1,14 @@
+artifact_uri: file:///opt/airflow/mlruns/259755627499288831/8b714cac219d4556b95157351c580537/artifacts
+end_time: 1794481372395
+entry_point_name: ''
+experiment_id: '259755627499288831'
+lifecycle_stage: active
+run_id: 8b714cac219d4556b95157351c580537
+run_name: Logistic Regression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794481367574
+status: 3
+tags: []
+user_id: default

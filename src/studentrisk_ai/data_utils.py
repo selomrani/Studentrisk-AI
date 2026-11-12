@@ -73,8 +73,7 @@ def fill_missing_values(train_df, test_df=None):
 # social-media time cannot be greater than total screen time
 def fix_social_media(train_df, test_df=None):
     train_df = train_df.copy()
-    test_df = train_df.copy() if test_df is None elÉtape 5 — Orchestration avec Airflow & application Streamlit
-se test_df.copy()
+    test_df = train_df.copy() if test_df is None else test_df.copy()
 
     for df in (train_df, test_df):
         invalid = df['Social_Media_Hours'] > df['Screen_Time_Hours']

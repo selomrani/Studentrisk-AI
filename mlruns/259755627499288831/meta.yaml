@@ -1,0 +1,6 @@
+artifact_location: file:///opt/airflow/mlruns/259755627499288831
+creation_time: 1794477457323
+experiment_id: '259755627499288831'
+last_update_time: 1794477457323
+lifecycle_stage: active
+name: StudentRisk

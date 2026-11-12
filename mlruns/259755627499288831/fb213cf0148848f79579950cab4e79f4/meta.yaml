@@ -1,0 +1,14 @@
+artifact_uri: file:///opt/airflow/mlruns/259755627499288831/fb213cf0148848f79579950cab4e79f4/artifacts
+end_time: 1794481744505
+entry_point_name: ''
+experiment_id: '259755627499288831'
+lifecycle_stage: active
+run_id: fb213cf0148848f79579950cab4e79f4
+run_name: XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794481739330
+status: 3
+tags: []
+user_id: default
